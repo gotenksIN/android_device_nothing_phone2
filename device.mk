@@ -66,8 +66,6 @@ PRODUCT_PACKAGES += android.hardware.fastboot@1.1-impl-mock
 
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 BOARD_HAVE_QCOM_FM := false
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
