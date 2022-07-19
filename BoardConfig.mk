@@ -109,7 +109,7 @@ BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 #Add non-hlos files to ota packages
-ADD_RADIO_FILES := true
+ADD_RADIO_FILES := false
 
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
