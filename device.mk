@@ -313,8 +313,6 @@ PRODUCT_PACKAGES += vendor.qti.camera.provider@2.6-service_64
 # Macro allows Camera module to use new service
 QTI_CAMERA_PROVIDER_SERVICE := 2.7
 
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/nothing/phone2/framework_manifest.xml
-
 # Enable compilation of image_generation_tool
 TARGET_USES_IMAGE_GEN_TOOL := true
 
