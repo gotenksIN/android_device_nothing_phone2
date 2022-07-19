@@ -103,9 +103,6 @@ BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
-TARGET_USES_ION := true
-TARGET_USES_NEW_ION_API := true
-
 BOARD_BOOTCONFIG := androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3
 
 BOARD_KERNEL_CMDLINE := msm_geni_serial.con_enabled=0
@@ -148,7 +145,6 @@ TARGET_PER_MGR_ENABLED := true
 
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
-
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
