@@ -42,7 +42,7 @@ BOARD_EXT4_SHARE_DUP_BLOCKS := true
 TARGET_NO_RECOVERY := true
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
-TARGET_RECOVERY_FSTAB := device/nothing/phone2/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/nothing/phone2/init/fstab.qcom
 
 # AVB
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
