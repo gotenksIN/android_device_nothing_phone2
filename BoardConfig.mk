@@ -112,7 +112,6 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_NO_RPC := true
 
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # Compile without full kernel source
 TARGET_COMPILE_WITH_MSM_KERNEL := false
