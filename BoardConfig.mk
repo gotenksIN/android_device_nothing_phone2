@@ -20,8 +20,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 
 BOARD_RAMDISK_USE_LZ4 := true
 
-USE_OPENGL_RENDERER := true
-
 # TODO: Enable it back when we have a path forward
 # Disable generation of dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := false
