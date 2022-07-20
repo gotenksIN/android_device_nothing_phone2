@@ -123,9 +123,6 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 #Add non-hlos files to ota packages
 ADD_RADIO_FILES := true
 
-# Enable sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
-
 #namespace definition for librecovery_updater
 #differentiate legacy 'sg' or 'bsg' framework
 SOONG_CONFIG_NAMESPACES += ufsbsg
