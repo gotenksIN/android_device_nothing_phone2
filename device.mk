@@ -138,9 +138,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
 
-PRODUCT_HOST_PACKAGES += \
-    configstore_xmlparser
-
 # QRTR related packages
 PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
