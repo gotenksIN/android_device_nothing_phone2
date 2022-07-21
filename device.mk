@@ -156,18 +156,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-ifeq (true,$(BUILDING_WITH_VSDK))
-    ALLOW_MISSING_DEPENDENCIES := true
-    TARGET_SKIP_CURRENT_VNDK := true
-    -include vendor/qcom/vsdk_snapshots_config/config.mk
-else
-    BOARD_VNDK_VERSION := current
-    RECOVERY_SNAPSHOT_VERSION := current
-    RAMDISK_SNAPSHOT_VERSION := current
-endif
-
-$(warning "BOARD_VNDK_VERSION = $(BOARD_VNDK_VERSION), RECOVERY_SNAPSHOT_VERSION=$(RECOVERY_SNAPSHOT_VERSION), RAMDISK_SNAPSHOT_VERSION=$(RAMDISK_SNAPSHOT_VERSION)")
-
 # Fingerprint feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
