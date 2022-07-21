@@ -116,6 +116,16 @@ PRODUCT_PACKAGES += qrtr-ns
 PRODUCT_PACKAGES += qrtr-lookup
 PRODUCT_PACKAGES += libqrtr
 
+# system_other support
+PRODUCT_PACKAGES += \
+    otapreopt_script
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
 # Userdata checkpoint
 PRODUCT_PACKAGES += \
     checkpoint_gc
