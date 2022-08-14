@@ -75,9 +75,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 ###########
 
-# RRO configuration
-TARGET_USES_RRO := true
-
 #Default vendor image configuration
 ENABLE_VENDOR_IMAGE := true
 
