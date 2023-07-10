@@ -5,10 +5,6 @@ BUILD_BROKEN_DUP_RULES := true
 
 RELAX_USES_LIBRARY_CHECK := true
 
-# Default Android A/B configuration
-ENABLE_AB ?= true
-
-ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Enable debugfs restrictions
@@ -42,11 +38,7 @@ PRODUCT_BUILD_VENDOR_DLKM_IMAGE := true
 PRODUCT_BUILD_PRODUCT_IMAGE := false
 PRODUCT_BUILD_SYSTEM_EXT_IMAGE := false
 PRODUCT_BUILD_ODM_IMAGE := false
-ifeq ($(ENABLE_AB), true)
 PRODUCT_BUILD_CACHE_IMAGE := false
-else
-PRODUCT_BUILD_CACHE_IMAGE := true
-endif
 PRODUCT_BUILD_RAMDISK_IMAGE := true
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 PRODUCT_BUILD_USERDATA_IMAGE := true
@@ -59,11 +51,7 @@ TARGET_SKIP_OTA_PACKAGE := true
 BOARD_AVB_ENABLE := true
 
 # Disable verified boot checks in abl if AVB is not enabled
-ifeq ($(BOARD_AVB_ENABLE), true)
 BOARD_ABL_SIMPLE := false
-else
-BOARD_ABL_SIMPLE := true
-endif
 
 # Set SYSTEMEXT_SEPARATE_PARTITION_ENABLE if was not already set (set earlier via build.sh).
 SYSTEMEXT_SEPARATE_PARTITION_ENABLE := true
@@ -180,19 +168,7 @@ PRODUCT_PACKAGES += fastbootd
 # Add default implementation of fastboot HAL.
 PRODUCT_PACKAGES += android.hardware.fastboot@1.1-impl-mock
 
-ifeq ($(ENABLE_AB),true)
-ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_noSysext.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-endif
-else
-ifeq ($(SYSTEMEXT_SEPARATE_PARTITION_ENABLE), true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab_non_AB_noSysext.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-endif
-endif
 BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
@@ -288,7 +264,6 @@ PRODUCT_PACKAGES += libGLES_android
 PRODUCT_PACKAGES += fs_config_files
 PRODUCT_PACKAGES += gpio-keys.kl
 
-ifeq ($(ENABLE_AB), true)
 # A/B related packages
 PRODUCT_PACKAGES += update_engine \
     update_engine_client \
@@ -305,7 +280,6 @@ PRODUCT_PACKAGES_DEBUG += bootctl
 
 PRODUCT_PACKAGES += \
   update_engine_sideload
-endif
 
 # Enable incremental fs
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -450,11 +424,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
 #Charger
-ifeq ($(ENABLE_AB),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/charger_fw_fstab_non_AB.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
-endif
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += telephony-ext
