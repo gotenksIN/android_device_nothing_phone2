@@ -195,14 +195,7 @@ QTI_CAMERA_PROVIDER_SERVICE := 2.7
 # Enable compilation of image_generation_tool
 TARGET_USES_IMAGE_GEN_TOOL := true
 
-# QCV allows multiple chipsets to be supported on a single vendor.
-# Add vintf device manifests for chipsets in taro QCV family below.
-TARGET_USES_QCV := true
-DEVICE_MANIFEST_SKUS := taro diwali cape ukee
-DEVICE_MANIFEST_TARO_FILES := device/nothing/phone2/manifest_taro.xml
-DEVICE_MANIFEST_DIWALI_FILES := device/nothing/phone2/manifest_diwali.xml
-DEVICE_MANIFEST_CAPE_FILES := device/nothing/phone2/manifest_cape.xml
-DEVICE_MANIFEST_UKEE_FILES := device/nothing/phone2/manifest_ukee.xml
+DEVICE_MANIFEST_FILE := device/nothing/phone2/manifest_cape.xml
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
 
