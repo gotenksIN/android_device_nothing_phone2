@@ -184,3 +184,6 @@ PRODUCT_VENDOR_PROPERTIES+= \
 
 # GPU Profiler support
 PRODUCT_VENDOR_PROPERTIES += graphics.gpu.profiler.support=true
+
+# Proprietary Vendor
+$(call inherit-product, vendor/nothing/phone2/phone2-vendor.mk)

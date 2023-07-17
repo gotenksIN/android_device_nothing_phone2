@@ -4,6 +4,9 @@
 #
 # TODO(b/124534788): Temporarily allow eng and debug LOCAL_MODULE_TAGS
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a-branchprot
 TARGET_CPU_ABI := arm64-v8a
