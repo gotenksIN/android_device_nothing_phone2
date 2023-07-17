@@ -71,6 +71,24 @@ BOARD_HAVE_QCOM_FM := false
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 ###########
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    alarm \
+    audio \
+    av \
+    bt \
+    charging \
+    display \
+    gps \
+    init \
+    media \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    wfd \
+    wlan
 
 #Default vendor image configuration
 ENABLE_VENDOR_IMAGE := true
