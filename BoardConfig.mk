@@ -39,7 +39,6 @@ BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 AB_OTA_PARTITIONS ?= boot vendor_boot recovery vendor vendor_dlkm odm dtbo vbmeta system system_ext product
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 
-TARGET_NO_RECOVERY := true
 # Defines for enabling A/B builds
 AB_OTA_UPDATER := true
 TARGET_RECOVERY_FSTAB := device/nothing/phone2/init/fstab.qcom
