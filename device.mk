@@ -160,6 +160,10 @@ TARGET_USES_IMAGE_GEN_TOOL := true
 
 DEVICE_MANIFEST_FILE := device/nothing/phone2/manifest_cape.xml
 
+# Prebuilt kernel defintions
+TARGET_USES_KERNEL_PLATFORM := true
+KERNEL_PREBUILT_DIR := device/nothing/phone2-kernel
+
 # Kernel modules install path
 KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
