@@ -164,10 +164,6 @@ DEVICE_MANIFEST_FILE := device/nothing/phone2/manifest_cape.xml
 TARGET_USES_KERNEL_PLATFORM := true
 KERNEL_PREBUILT_DIR := device/nothing/phone2-kernel
 
-# Kernel modules install path
-KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := out/target/product/$(PRODUCT_NAME)/$(KERNEL_MODULES_INSTALL)/lib/modules
-
 #Enable full treble flag
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
