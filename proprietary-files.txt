@@ -137,7 +137,7 @@ vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 
 # Alarm
-product/app/PowerOffAlarm/PowerOffAlarm.apk
+#product/app/PowerOffAlarm/PowerOffAlarm.apk
 system_ext/lib/vendor.qti.hardware.alarm@1.0.so
 system_ext/lib64/vendor.qti.hardware.alarm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
@@ -1590,7 +1590,7 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+#-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/lib/libqc2audio_base.so
 vendor/lib/libqc2audio_basecodec.so
 vendor/lib/libqc2audio_core.so
@@ -1716,7 +1716,7 @@ vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/perf/targetsysnodesconfigs.xml
 vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
+#-vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
 vendor/etc/powerhint.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
@@ -1790,7 +1790,7 @@ vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # Radio
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+#system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/lib/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.lpa@1.0.so
@@ -1829,7 +1829,7 @@ system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+#system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
@@ -2013,7 +2013,7 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
-system_ext/priv-app/ims/ims.apk
+#system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/seccomp_policy/imsrtp.policy
@@ -2300,7 +2300,7 @@ vendor/etc/sensors/sns_reg_config
 # Service tracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
+#-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib/vendor.qti.hardware.servicetracker@1.0.so
 vendor/lib/vendor.qti.hardware.servicetracker@1.1.so
@@ -2519,7 +2519,7 @@ system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
 system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so
-system_ext/priv-app/WfdService/WfdService.apk
+#system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
@@ -3017,7 +3017,7 @@ vendor/etc/seccomp_policy/sxr@2.0.policy
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 -vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
--vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
+#-vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 -vendor/etc/vintf/manifest/dataconnection-saidl.xml
 -vendor/etc/vintf/manifest/manifest_lahaina_identity.xml
 -vendor/etc/vintf/manifest/manifest_non_qmaa.xml
@@ -3030,10 +3030,10 @@ vendor/etc/ssg/tz_whitelist.json
 -vendor/etc/vintf/manifest/vendor.qti.hardware.display.demura-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig@1.0-service.xml
+#-vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
+#-vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig@1.0-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.vpp@2.0-service.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
+#-vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
 -vendor/etc/vintf/manifest_cape.xml
 -vendor/etc/vintf/manifest_diwali.xml
 -vendor/etc/vintf/manifest_taro.xml
